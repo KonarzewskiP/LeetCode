@@ -3,6 +3,7 @@ package easy.degreeOfAnArray;
 import java.util.HashMap;
 
 public class DegreeOfAnArray {
+
     //[1,2,2,3,1] = 2
     //[1,2,2,3,1,4,2] = 6
     public int findShortestSubArray(int[] nums) {

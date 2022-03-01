@@ -1,16 +1,28 @@
 package easy;
 
-import easy.twoSum.TwoSum;
 
-import java.util.Arrays;
+import easy.mergeTwwSortedLists.MergeTwoSortedLists;
 
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = TwoSum.twoSum(new int[]{3, 2, 4}, 6);
-//        int[] arr = TwoSum.twoSum(new int[]{3, 3}, 6);
-//        int[] arr = TwoSum.twoSum(new int[]{15,7,11,2}, 9);
+        Test one = new Test();
 
-        Arrays.stream(arr).forEach(System.out::println);
+        System.out.println(one.val);
+        System.out.println(one.val);
+        System.out.println(one.val);
     }
+
+    private static class Test {
+        int val;
+
+        Test() {
+
+        }
+
+        Test(int val) {
+            this.val = val;
+        }
+    }
+
 }
