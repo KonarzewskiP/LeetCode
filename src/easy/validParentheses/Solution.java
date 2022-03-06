@@ -5,6 +5,35 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class Solution {
+
+    public boolean isValidLatest(String s) {
+        Stack<Character> stack = new Stack();
+        HashMap<Character,Character> closeBrackets = new HashMap();
+        closeBrackets.put(')','(');
+        closeBrackets.put(']','[');
+        closeBrackets.put('}','{');
+        //"()[]{}"
+        //"(]"
+        //"][]"
+        char temp;
+
+        for(char c : s.toCharArray()){
+            if(closeBrackets.containsKey(c)){
+                if(stack.empty()){
+                    return false;
+                }
+
+                temp = stack.pop();
+                if(temp != closeBrackets.get(c)){
+                    return false;
+                }
+            } else {
+                stack.push(c);
+            }
+        }
+
+        return stack.empty();
+    }
     public boolean isValidSECOND(String s) {
         char[] arr = s.toCharArray();
         LinkedList<Character> list = new LinkedList();
